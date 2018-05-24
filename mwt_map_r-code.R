@@ -13,12 +13,19 @@ setwd("D:/Users/Christopher/Dropbox/NDAD/DHSI/course-packet/datasets/monroe-work
     include_states     =  F           #set to T to include state boundaries
     aggregate_states   =  F           #set to T to aggregate lynchings by state (cloropleth)
     include_counties   =  F           #set to T to include county boundaries
-    aggregate_counties =  F           #set to T to aggregate lynchings by county (cloropleth)
+    aggregate_counties =  T           #set to T to aggregate lynchings by county (cloropleth)
     color_ramp_strt    =  "red"
     color_ramp_end     =  "darkred"
     color_breaks       =  7           #number of color breaks
     scale_log10        =  F           #set the clorpleth scale to log10
     jitter             =  T           #jitter the points to avoid overlap, adds noise to data
+    title_size         = 32
+    subtitle_size      = 22
+    caption_size       = 12
+    map_title          = "Title"
+    map_subtitle       = "Subtitle"
+    map_caption        = "Caption"
+    legend_title       = "Lynchings"
 #----------------------------------------------------------------------------------
 #libraries
    library(ggplot2)
@@ -45,24 +52,27 @@ setwd("D:/Users/Christopher/Dropbox/NDAD/DHSI/course-packet/datasets/monroe-work
                   FUN = function(x){NROW(x)})
    states <- merge(states,aggstates,by="state",all.x=T)
    states <- states[order(states$order),]
+   aggregate_data=states
    }
    #aggregate points by county
    if (aggregate_counties==T) {
+   names(state.abb) <- tolower(state.name) 
    counties$county_id = paste0(tolower(state.abb[counties$region]),"s_",counties$subregion)
    aggcounties <- aggregate(cbind(count = mwt_id) ~ county_id, 
                           data = merged_data, 
                           FUN = function(x){NROW(x)})
    counties <- merge(counties,aggcounties,by="county_id",all.x=T)
    counties <- counties[order(counties$order),]
+   aggregate_data=counties
    }
       
 #make base map
    g = ggplot() + 
       geom_polygon(data = usa, aes(x=long, y = lat, group = group),fill="white",color="black") +
       coord_fixed(1.3)
-   #AGGREGATE STATES
-   if (aggregate_states==T) {
-     g = g + geom_polygon(data = states, aes(x = long, y = lat, group = group,fill=count), color = border_color) + coord_fixed(1.3)
+   #AGGREGATE CHLOROPLETH
+   if (aggregate_states==T || aggregate_counties==T) {
+     g = g + geom_polygon(data = aggregate_data, aes(x = long, y = lat, group = group,fill=count), color = border_color) + coord_fixed(1.3)
      colfunc <- colorRampPalette(c(color_ramp_strt, color_ramp_end))
      g = g + scale_fill_gradientn(colours = rev(colfunc(color_breaks)),na.value=fill_color)
      if (scale_log10 == T) { 
@@ -72,18 +82,6 @@ setwd("D:/Users/Christopher/Dropbox/NDAD/DHSI/course-packet/datasets/monroe-work
      g = g + geom_polygon(data = states, aes(x = long, y = lat, group = group), color = border_color,fill=fill_color) + 
        coord_fixed(1.3)  +  guides(fill=FALSE) 
     }
-   #AGGREGATE COUNTIES
-   if (aggregate_counties==T) {
-     g = g + geom_polygon(data = counties, aes(x = long, y = lat, group = group,fill=count), color = border_color) + coord_fixed(1.3)
-     colfunc <- colorRampPalette(c(color_ramp_strt, color_ramp_end))
-     g = g + scale_fill_gradientn(colours = rev(colfunc(color_breaks)),na.value=fill_color)
-     if (scale_log10 == T) { 
-       g = g + scale_fill_gradientn(colours = rev(colfunc(color_breaks)),na.value=fill_color,trans="log10")
-     }
-   } else if (include_counties==T) { 
-     g = g + geom_polygon(data = counties, aes(x = long, y = lat, group = group), color = border_color,fill=fill_color) + 
-       coord_fixed(1.3)  +  guides(fill=FALSE) 
-   }   
  
 #add points
    if (show_points==T) { g = g + geom_point(data=merged_data,aes(x=lng_centroid,y=lat_centroid),color=point_color,size=point_size,alpha=point_alpha)}
@@ -92,7 +90,10 @@ setwd("D:/Users/Christopher/Dropbox/NDAD/DHSI/course-packet/datasets/monroe-work
  if (jitter==T) { g = g + geom_jitter()}
       
 #theme
-  g = g + theme_bw()
+  g = g + theme_bw() + theme(plot.title = element_text(size=title_size),plot.subtitle = element_text(size=subtitle_size),text = element_text(size=20),plot.caption=element_text(size=caption_size))
+  
+#labels
+  g = g + labs(title=map_title,subtitle=map_subtitle,caption=map_caption) + guides(fill=guide_legend(legend_title))
 #draw map
   g
 
