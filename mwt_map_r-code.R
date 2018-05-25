@@ -4,6 +4,9 @@
 setwd("D:/Users/Christopher/Dropbox/NDAD/DHSI/course-packet/datasets/monroe-work-today")
 
 #Variables to set to explore how to visualize these data ethically
+    start_year         = 1803         #when to start mapping, default = 1803
+    end_year           = 2011         #when to end mapping, default = 2011
+    white_supremacy    = F            #set to T to only include those that the dataset author concluded were incidents of white supremacy 
     border_color       = "black"      #what color to set the polygon boundaries
     fill_color         = "white"      #what color to set the polygon fill
     show_points        =  T           #show the point of lynching by county centroid
@@ -13,7 +16,7 @@ setwd("D:/Users/Christopher/Dropbox/NDAD/DHSI/course-packet/datasets/monroe-work
     include_states     =  F           #set to T to include state boundaries
     aggregate_states   =  F           #set to T to aggregate lynchings by state (cloropleth)
     include_counties   =  F           #set to T to include county boundaries
-    aggregate_counties =  T           #set to T to aggregate lynchings by county (cloropleth)
+    aggregate_counties =  F           #set to T to aggregate lynchings by county (cloropleth)
     color_ramp_strt    =  "red"
     color_ramp_end     =  "darkred"
     color_breaks       =  7           #number of color breaks
@@ -32,10 +35,13 @@ setwd("D:/Users/Christopher/Dropbox/NDAD/DHSI/course-packet/datasets/monroe-work
    library(maps)
 #get data
    lynchings = read.csv("MWT_dataset_compilation_v1_0_ChurchHepworth.csv")
+   lynchings = lynchings [lynchings$year_source>=start_year & lynchings$year_source<=end_year,]
+   if (white_supremacy==T) {lynchings = lynchings [lynchings$mwt_white_supremacy==1,]}
    county_centroids = read.csv("MonroeWorkToday_Counties_centroids.csv")
    merged_data = merge(lynchings,county_centroids, by="keyid",all.x="TRUE")
    #merged_data = read.csv("MWT_merged_centroids.csv") #uncomment this to speed things up, so you don't have to merge the tables every time
-    
+  
+     
    #map data
    usa <- map_data("usa")
    if (include_states==T || aggregate_states==T) {states <- map_data("state")}
