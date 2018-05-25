@@ -1,4 +1,7 @@
+#INSTRUCTIONAL CODE FOR ETHICAL VISUALIZATIONS - DHSI
+#CHRISTOPHER CHURCH / KATHERINE HEPWORTH
 #Gun deaths in Florida - Example
+
 #-----------------------------------------------------------------------------------------------
 #VARIABLES for you to CHANGE
 plottype = "scatter"          #What type of graph do you want (options: "scatter" or "bar")
