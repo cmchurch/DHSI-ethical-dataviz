@@ -78,11 +78,12 @@ setwd("D:/Users/Christopher/Dropbox/NDAD/DHSI/course-packet/datasets/monroe-work
       coord_fixed(1.3)
    #AGGREGATE CHLOROPLETH
    if (aggregate_states==T || aggregate_counties==T) {
+ 
      g = g + geom_polygon(data = aggregate_data, aes(x = long, y = lat, group = group,fill=count), color = border_color) + coord_fixed(1.3)
      colfunc <- colorRampPalette(c(color_ramp_strt, color_ramp_end))
-     g = g + scale_fill_gradientn(colours = rev(colfunc(color_breaks)),na.value=fill_color)
+     g = g + scale_fill_gradientn(name=legend_title,colours = rev(colfunc(color_breaks)),na.value=fill_color)
      if (scale_log10 == T) { 
-       g = g + scale_fill_gradientn(colours = rev(colfunc(color_breaks)),na.value=fill_color,trans="log10")
+       g = g + scale_fill_gradientn(name=legend_title,colours = rev(colfunc(color_breaks)),na.value=fill_color,trans="log10")
      }
     } else if (include_states==T) { 
      g = g + geom_polygon(data = states, aes(x = long, y = lat, group = group), color = border_color,fill=fill_color) + 
@@ -99,7 +100,7 @@ setwd("D:/Users/Christopher/Dropbox/NDAD/DHSI/course-packet/datasets/monroe-work
   g = g + theme_bw() + theme(plot.title = element_text(size=title_size),plot.subtitle = element_text(size=subtitle_size),text = element_text(size=20),plot.caption=element_text(size=caption_size))
   
 #labels
-  g = g + labs(title=map_title,subtitle=map_subtitle,caption=map_caption) + guides(fill=guide_legend(legend_title))
+  g = g + labs(title=map_title,subtitle=map_subtitle,caption=map_caption)
 #draw map
   g
 
