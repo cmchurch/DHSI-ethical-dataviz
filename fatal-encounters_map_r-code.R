@@ -1,4 +1,4 @@
-#INSTRUCTIONAL CODE FOR MONROE WORK TODAY (auut studio) ETHICAL VISUALIZATIONS - DHSI - MAPPING PORTION
+#INSTRUCTIONAL CODE FOR FATAL ENCOUNTERS ETHICAL VISUALIZATIONS - DHSI - MAPPING PORTION
 #CHRISTOPHER CHURCH / KATHERINE HEPWORTH
 #NOTE: Code only works for lower 48 states
 
@@ -26,7 +26,7 @@ caption_size       = 12
 map_title          = "Title"
 map_subtitle       = "Subtitle"
 map_caption        = "Caption"
-legend_title       = "Encounters"
+legend_title       = "Legend"
 #----------------------------------------------------------------------------------
 #libraries
 library(ggplot2)
