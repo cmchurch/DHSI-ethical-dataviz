@@ -10,6 +10,12 @@ All work herein is available under a Creative Commons license.
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 
+<h2>FOR THE CODES TO WORK</h2>
+You'll need to download the datasets and put them somewhere in your home directory. Then make sure to update the <em>setwd</em> command to where you put the files, like so
+
+setwd('~/folder-in-home-directory')
+
+You can download the datasets here: <a href="https://nevada.box.com/v/dhsi2018"> https://nevada.box.com/v/dhsi2018</a>. You'll need to ask the instructors for the password.
 
 ------ 
 <h1>SYLLABUS</h1>
