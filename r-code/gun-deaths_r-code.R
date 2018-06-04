@@ -5,13 +5,13 @@
 #-----------------------------------------------------------------------------------------------
 #VARIABLES for you to CHANGE
 plottype = "scatter"          #What type of graph do you want (options: "scatter" or "bar")
-inverse_y_scale = F           #SET TO T TO INVERT THE Y-AXIS, SET F TO NOT INVERT
+inverse_y_scale = T           #SET TO T TO INVERT THE Y-AXIS, SET F TO NOT INVERT
 inverse_coords = F            #SET TO T TO INVERT THE X AND Y AXES
 label_stand_your_ground = F   #SET TO T TO PLACE A LABEL WHEN STAND YOUR GROUND BEGAN in 2005
 draw_scatter_line = F         #setting for scatter plot, set to T to draw line
 draw_scatter_points=T         #setting for scater plot, set to T to draw points
 draw_scatter_fill = F         #setting for scatter plot, 
-fill_color = "darkred"        #color to fill the area for both scatter and box, suggest="darkred"
+fill_color = "AntiqueWhite"   #color to fill the area for both scatter and box, suggest="darkred"
 fill_transparency = 0.75      #scale of 0 to 1 (suggest 0.75), for both scatter and box
 x_min = 1990                  #minimum year to show on x axis, default = 1990
 x_max = 2015                  #maximum year to show on x axis, default = 2015
@@ -27,9 +27,9 @@ line_width = 1                #how big do you want the size of the line width?, 
 plot_title = "Title"  #title of the Plot
 plot_subtitle = "Subtitle"  #subtitle of plot
 plot_caption = "Caption"
-point_label = "Point Label"
+point_label = "Title"
 x_label = "X Label"
-y_label = ""
+y_label = "Y Label"
 #-----------------------------------------------------------------------------------------------
 #DATA FROM FLORIDA DEPARTMENT OF LAW ENFORCEMENT
 deaths_by_year = c(873,806,789,800,739,687,668,634,589,460,499,502,552,586,555,521,740,825,780,695,669,691,721,696,690,767)
