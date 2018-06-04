@@ -1,7 +1,7 @@
 #INSTRUCTIONAL CODE FOR MONROE WORK TODAY (auut studio) ETHICAL VISUALIZATIONS - DHSI - MAPPING PORTION
 #CHRISTOPHER CHURCH / KATHERINE HEPWORTH
 
-setwd("D:/Users/Christopher/Dropbox/NDAD/DHSI/course-packet/datasets/monroe-work-today")
+setwd("C:/Users/Christopher/Dropbox/NDAD/DHSI/course-packet/datasets/monroe-work-today")
 
 #Variables to set to explore how to visualize these data ethically
     start_year         = 1803         #when to start mapping, default = 1803
