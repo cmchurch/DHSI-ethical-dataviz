@@ -46,7 +46,7 @@ All work herein is available under a Creative Commons license.
 <li><a href="https://mathwithbaddrawings.com/2016/07/13/why-not-to-trust-statistics/">com/2016/07/13/why-not-to-trust-statistics</a></li>
 </ul>
 </li>
-<li><strong><em>60 minutes: </em></strong><em>Activity:</em> Guns Deaths in FL graph</li>
+<li><strong><em>60 minutes: </em></strong><em>Activity:</em> Gun Deaths in FL graph</li>
 </ul>
 <p>&nbsp;</p>
 <p><strong>Day 2: Racist Historical Data</strong></p>
@@ -59,7 +59,7 @@ All work herein is available under a Creative Commons license.
 <li><strong><em>60 minutes:</em></strong><em> Examples and discussion: </em>Exploring Sample Visualizations &mdash; Challenging Racism with Visualizations - W.E.B. Dubois
 <ul>
 <li>10 minutes: Read the following: <a href="https://www.theguardian.com/world/2017/feb/14/web-du-bois-racism-data-paris-african-americans-jobs">https://www.theguardian.com/world/2017/feb/14/web-du-bois-racism-data-paris-african-americans-jobs</a></li>
-<li>10 minutes: discussion of Dubois and Chalabi charts</li>
+<li>10 minutes: discussion of Du Bois and Chalabi charts</li>
 </ul>
 </li>
 <li><strong><em>50 minutes:</em></strong><em> Reading and discussion activity:</em> <em>Forgotten Dead</em>, Introduction</li>
@@ -83,7 +83,7 @@ All work herein is available under a Creative Commons license.
 <li><strong><em>60 minutes: </em></strong><em>Ensuring Ethical Use of Data</em>
 <ul>
 <li><strong><em>30 minutes: </em></strong><em>Documentation: </em>Ethical Visualization Workflow</li>
-<li><strong><em>30 minutes</em></strong>: Memos of Understanding</li>
+<li><strong><em>30 minutes</em></strong>: <a href="http://www.monroeworktoday.org/extras/files/MOU.pdf">Memos of Understanding</a></li>
 </ul>
 </li>
 <li><strong><em>30 minutes: </em></strong><em>Lecture: </em>Problematizing visualizations &mdash; The visual rhetoric of graphic elements and their impact on audiences</li>
