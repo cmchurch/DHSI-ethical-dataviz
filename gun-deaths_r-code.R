@@ -7,10 +7,10 @@
 plottype = "scatter"          #What type of graph do you want (options: "scatter" or "bar")
 inverse_y_scale = F           #SET TO T TO INVERT THE Y-AXIS, SET F TO NOT INVERT
 inverse_coords = F            #SET TO T TO INVERT THE X AND Y AXES
-label_stand_your_ground = T   #SET TO T TO PLACE A LABEL WHEN STAND YOUR GROUND BEGAN in 2005
-draw_scatter_line = T         #setting for scatter plot, set to T to draw line
+label_stand_your_ground = F   #SET TO T TO PLACE A LABEL WHEN STAND YOUR GROUND BEGAN in 2005
+draw_scatter_line = F         #setting for scatter plot, set to T to draw line
 draw_scatter_points=T         #setting for scater plot, set to T to draw points
-draw_scatter_fill = T         #setting for scatter plot, 
+draw_scatter_fill = F         #setting for scatter plot, 
 fill_color = "darkred"        #color to fill the area for both scatter and box, suggest="darkred"
 fill_transparency = 0.75      #scale of 0 to 1 (suggest 0.75), for both scatter and box
 x_min = 1990                  #minimum year to show on x axis, default = 1990
