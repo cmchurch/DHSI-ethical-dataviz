@@ -2,13 +2,13 @@
 #CHRISTOPHER CHURCH / KATHERINE HEPWORTH
 
 #Where did you download the data?
-setwd("D:/Users/Christopher/Dropbox/NDAD/DHSI/course-packet/datasets/")
+setwd("C:/Users/Christopher/Dropbox/NDAD/DHSI/course-packet/datasets/")
 
 #variables
 #----------------------------------------------------------------------------------------------------------
 start_year         = 2000               #when to start mapping, default = 2000
 end_year           = 2018               #when to end mapping, default = 2018
-x_axis             = "Cause.of.death"   #what do you want to tally?  [Cause.of.death,Subject.s.race,Subject.s.gender,Subject.s.age,year]
+x_axis             = "CAUSE.DEATH"      #what do you want to tally?  [CAUSE.DEATH,RACE,SEX,AGE,year]
 plot_type          = "bar"              #what type of plot do you want to create?    [bar,scatter,pie,waffle,histogram]
 plot_title_size    = 32                 #how big do you want the size of the title font? , default is 32
 plot_subtitle_size = 22                 #how big do you want the size of the subtitle font?, default is 22
@@ -28,16 +28,20 @@ encounters$Su
 encounters = read.csv("fatal-encounters.csv",header=T,stringsAsFactors = F)
 encounters = encounters[encounters$year>=start_year & encounters$year<=end_year,]
 
+plot_type = tolower(plot_type)
+
 a = x_axis
 b = "count"
 
-agg <- aggregate(cbind(count = Unique.identifier) ~ encounters[,a], data = encounters, FUN = function(x){NROW(x)})
+agg <- aggregate(cbind(count = UID) ~ encounters[,a], data = encounters, FUN = function(x){NROW(x)})
 
 colnames(agg) <- c(a,b)
 
 g <- ggplot(agg,aes_string(a,b))
 if (plot_type=="bar") { g = g + geom_bar(stat="identity")}
-if (plot_type=="scatter") {g = g + geom_line()}
+if (plot_type=="scatter") {
+
+  g = g + geom_line()}
 if (plot_type=="pie") {
   agg$percent = (agg[,b]/sum(agg[,b])*100)
   g = ggplot(agg,aes_string(x=1,agg[,"percent"],fill=a)) + geom_bar(width=1,stat="identity") + coord_polar("y", start=0)

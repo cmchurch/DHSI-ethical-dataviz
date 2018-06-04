@@ -2,7 +2,7 @@
 #CHRISTOPHER CHURCH / KATHERINE HEPWORTH
 #NOTE: Code only works for lower 48 states
 
-setwd("D:/Users/Christopher/Dropbox/NDAD/DHSI/course-packet/datasets/")
+setwd("C:/Users/Christopher/Dropbox/NDAD/DHSI/course-packet/datasets/")
 
 #Variables to set to explore how to visualize these data ethically
 start_year         = 2000         #when to start mapping, default = 2000
@@ -14,7 +14,7 @@ point_color        = "black"      #what color do you want the points to be?
 point_size         =  0.5         #how big do you want the points to be?
 point_alpha        =  1           #set the point transparency from 0 to 1
 include_states     =  F           #set to T to include state boundaries
-aggregate_states   =  F           #set to T to aggregate encounters by state (cloropleth) - only works lower 48
+aggregate_states   =  T           #set to T to aggregate encounters by state (cloropleth) - only works lower 48
 color_ramp_strt    =  "red"
 color_ramp_end     =  "darkred"
 color_breaks       =  7           #number of color breaks
@@ -35,8 +35,8 @@ library(maps)
 #get data
 encounters = read.csv("fatal-encounters.csv",header=T,stringsAsFactors = F)
 encounters = encounters[encounters$year>=start_year & encounters$year<=end_year,]
-encounters = encounters[encounters$Location.of.death..state.!="AK",]
-encounters = encounters[encounters$Location.of.death..state.!="HI",]
+encounters = encounters[encounters$LOCATION.STATE!="AK",]
+encounters = encounters[encounters$LOCATION.STATE!="HI",]
 #map data
 usa <- map_data("usa")
 #usa <- map_data("world", c("USA", "hawaii"), xlim = c(-180, -65), ylim = c(19, 72))
@@ -49,10 +49,10 @@ if (include_states==T || aggregate_states==T) {states <- map_data("state")}
 if (aggregate_states==T) {
   names(state.abb) <- tolower(state.name) 
   states$state <- state.abb[states$region]
-  aggstates <- aggregate(cbind(count = Unique.identifier) ~ Location.of.death..state., 
+  aggstates <- aggregate(cbind(count = UID) ~ LOCATION.STATE, 
                          data = encounters, 
                          FUN = function(x){NROW(x)})
-  states <- merge(states,aggstates,by.x=c("state"),by.y=c("Location.of.death..state."),all.x=T)
+  states <- merge(states,aggstates,by.x=c("state"),by.y=c("LOCATION.STATE"),all.x=T)
   states <- states[order(states$order),]
   aggregate_data=states
 }
