@@ -25,7 +25,7 @@ All work herein is available under a Creative Commons license.
 <p><em>10:15 to Noon (1.75 hours)</em></p>
 <ul>
 <li><strong><em>20 - 30 minutes: </em></strong><em>Class introductions</em></li>
-<li><strong><em>10 minutes:</em></strong><em> EBMC Multicultural Interactions</em></li>
+<li><strong><em>10 minutes:</em></strong><em> <a href="http://www.emergingsf.org/wp-content/uploads/2017/08/EBMC_AgreemntsMulticulturalInteractions15.09.13-copy.pdf">EBMC Multicultural Interactions</a></em></li>
 <li><strong><em>65 minutes: </em></strong><em>Lecture and discussion: </em>
 <ul>
 <li><em>Introduction to Dataviz, visual conventions &amp; first principles &mdash; Visual hierarchy, legibility, and color</em></li>
