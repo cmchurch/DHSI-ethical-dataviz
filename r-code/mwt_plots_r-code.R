@@ -2,25 +2,39 @@
 #CHRISTOPHER CHURCH / KATHERINE HEPWORTH
 
 #Where did you download the data?
-setwd(
-  "D:/Users/Christopher/Dropbox/NDAD/DHSI/course-packet/datasets/monroe-work-today"
-)
+#setwd("D:/Users/Christopher/Dropbox/NDAD/DHSI/course-packet/datasets/monroe-work-today")
 
 #variables
 #----------------------------------------------------------------------------------------------------------
+
+#chart type
+plot_type          = "bar"              #what type of plot do you want to create?
+                                        #[bar,scatter,pie,waffle]
+#data range and axes
 start_year         = 1803               #when to start mapping, default = 1803
 end_year           = 2011               #when to end mapping, default = 2011
 white_supremacy    = T                  #set to T to only include those that the dataset author concluded were incidents of white supremacy
 x_axis             = "mwt_race"         #what do you want to tally?  [mwt_race,race_source,year_source,sex,alleged,mwt_alleged_category]
-plot_type          = "bar"              #what type of plot do you want to create?    [bar,scatter,pie,waffle]
-plot_title_size    = 32                 #how big do you want the size of the title font? , default is 32
-plot_subtitle_size = 22                 #how big do you want the size of the subtitle font?, default is 22
-caption_size       = 10                 #how big do you want the size of the caption font?, default is 10
-plot_title         = "Plot Title"
-plot_subtitle      = "Subtitle"
-plot_caption       = "Caption"
-x_label            = ""
-y_label            = ""
+x_axis_color       = "black"            #what color do you want this to be? [hexidecimal ref or named color]
+x_axis_size       = 0.1
+
+#text labels, font weights, sizes, and colors
+font
+plot_title             = "Plot Title"
+plot_title_size        = 22            #how big do you want the size of the title font? , default is 32
+plot_title_font_face   = "bold"        #what font weight do you want this to be? [plain, italic, bold]
+plot_title_color       = "black"       #what color do you want this to be? [hexidecimal ref or named color]
+plot_subtitle          = "Subtitle"
+plot_subtitle_size     = 12            #how big do you want the size of the subtitle font?, default is 22
+plot_subtitle_font_face = "plain"       #what font weight do you want this to be? [plain, italic, bold]
+plot_caption           = "Caption"
+caption_size           = 10            #how big do you want the size of the caption font?, default is 10
+caption_font_face      = "italic"        #what font weight do you want this to be? [plain, italic, bold]
+caption_color         = "black"       #what color do you want this to be? [hexidecimal ref or named color]
+x_label                = "Test"
+y_label                = "Test"
+label_size             = 12            #how big do you want the size of the axis label fonts?, default is 22
+label_font_face        = "italic"      #what font weight do you want this to be? [plain, italic, bold]
 #----------------------------------------------------------------------------------------------------------
 #libraries
 library(ggplot2)
@@ -81,14 +95,25 @@ g = g + labs(title = plot_title,
 
 #COLOR AND THEME
 g = g + theme_bw() + theme(
-  plot.title = element_text(size = plot_title_size),
-  plot.subtitle = element_text(size = plot_subtitle_size),
-  text = element_text(size = 20),
-  plot.caption = element_text(size = caption_size),
+  plot.title = element_text(
+        size = plot_title_size,
+        face = plot_title_font_face,
+        color = plot_title_color),
+  plot.subtitle = element_text(
+        size = plot_subtitle_size,
+        face = plot_subtitle_font_face,
+        color = plot_title_color),
+  text = element_text(
+        size = label_size,              
+        face = label_font_face),
+  plot.caption = element_text(
+        size = caption_size,
+        face = caption_font_face,
+        color = caption_color),
   axis.text.x = element_text(angle = 45, hjust = 1),
   panel.grid.major.x = element_blank(),
   panel.grid.minor.x = element_blank(),
-  panel.grid.major.y = element_line(size = .1, color = "black")
+  panel.grid.major.y = element_line(size = x_axis_size, color = x_axis_color)
 )
 if (plot_type == "pie" || plot_type == "waffle") {
   g = g + theme(
