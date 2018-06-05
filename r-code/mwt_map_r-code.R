@@ -32,7 +32,7 @@ color_breaks       =  7           #number of color breaks
 scale_log10        =  F           #set the clorpleth scale to log10
 
 #Fonts, titles, captions
-title_size         = 30
+title_size         = 10
 subtitle_size      = 10
 caption_size       = 10
 map_title          = "Title"
