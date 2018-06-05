@@ -18,7 +18,7 @@ include_states     =  F           #set to T to include state boundaries
 aggregate_states   =  F           #set to T to aggregate lynchings by state (cloropleth)
 include_counties   =  F           #set to T to include county boundaries
 aggregate_counties =  F           #set to T to aggregate lynchings by county (cloropleth)
-jitter             =  T           #jitter the points to avoid overlap, adds noise to data
+jitter             =  F           #jitter the points to avoid overlap, adds noise to data
 
 #colors
 border_color       = "black"      #what color to set the polygon boundaries
