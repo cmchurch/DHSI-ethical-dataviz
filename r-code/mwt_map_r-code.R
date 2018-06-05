@@ -172,10 +172,27 @@ if (jitter == T) {
 
 #theme
 g = g + theme_bw() + theme(
-  plot.title = element_text(size = title_size,face=title_face,color=title_color),
-  plot.subtitle = element_text(size = subtitle_size,face=subtitle_face,color=subtitle_color),
-  text = element_text(size = font_size,face=global_font_face,color=text_color),
-  plot.caption = element_text(size = caption_size,face=caption_face,color=caption_color)
+  plot.title = element_text(
+    size = title_size,
+    face=title_face,
+    color=title_color),
+  plot.subtitle = element_text(
+    size = subtitle_size,
+    face=subtitle_face,
+    color=subtitle_color),
+  text = element_text(
+    size = font_size,
+    face=global_font_face,
+    color=text_color),
+  plot.caption = element_text(
+    size = caption_size,
+    face=caption_face,
+    color=caption_color),
+  panel.grid.major = element_blank(),
+  panel.grid.minor = element_blank(),
+  axis.text = element_blank(),
+  panel.border=element_blank(),
+  axis.ticks= element_blank()
 )
 
 #labels
