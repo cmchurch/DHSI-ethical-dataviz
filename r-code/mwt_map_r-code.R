@@ -30,6 +30,10 @@ color_ramp_strt    =  "grey"
 color_ramp_end     =  "black"
 color_breaks       =  7           #number of color breaks
 scale_log10        =  F           #set the clorpleth scale to log10
+title_color        = "black"
+subtitle_color     = "black"
+text_color         = "black"
+caption_color      = "black"
 
 #Fonts, titles, captions
 title_size         = 10
@@ -168,10 +172,10 @@ if (jitter == T) {
 
 #theme
 g = g + theme_bw() + theme(
-  plot.title = element_text(size = title_size,face=title_face),
-  plot.subtitle = element_text(size = subtitle_size,face=subtitle_face),
-  text = element_text(size = font_size,face=global_font_face),
-  plot.caption = element_text(size = caption_size,face=caption_face)
+  plot.title = element_text(size = title_size,face=title_face,color=title_color),
+  plot.subtitle = element_text(size = subtitle_size,face=subtitle_face,color=subtitle_color),
+  text = element_text(size = font_size,face=global_font_face,color=text_color),
+  plot.caption = element_text(size = caption_size,face=caption_face,color=caption_color)
 )
 
 #labels
