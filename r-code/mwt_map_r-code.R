@@ -1,40 +1,57 @@
 #INSTRUCTIONAL CODE FOR MONROE WORK TODAY (auut studio) ETHICAL VISUALIZATIONS - DHSI - MAPPING PORTION
 #CHRISTOPHER CHURCH / KATHERINE HEPWORTH
 
-setwd(
-  "C:/Users/Christopher/Dropbox/NDAD/DHSI/course-packet/datasets/monroe-work-today"
-)
+#For these codes to work, please set the working path
+
+#setwd("C:/Users/Christopher/Dropbox/NDAD/DHSI/course-packet/datasets/monroe-work-today")
 
 #Variables to set to explore how to visualize these data ethically
+
+#data range
 start_year         = 1803         #when to start mapping, default = 1803
 end_year           = 2011         #when to end mapping, default = 2011
 white_supremacy    = F            #set to T to only include those that the dataset author concluded were incidents of white supremacy
-border_color       = "black"      #what color to set the polygon boundaries
-fill_color         = "white"      #what color to set the polygon fill
+
+#plot type settings
 show_points        =  T           #show the point of lynching by county centroid
-point_color        = "black"      #what color do you want the points to be?
-point_size         =  1           #how big do you want the points to be?
-point_alpha        =  1           #set the point transparency from 0 to 1
 include_states     =  F           #set to T to include state boundaries
 aggregate_states   =  F           #set to T to aggregate lynchings by state (cloropleth)
 include_counties   =  F           #set to T to include county boundaries
 aggregate_counties =  F           #set to T to aggregate lynchings by county (cloropleth)
-color_ramp_strt    =  "red"
-color_ramp_end     =  "darkred"
+jitter             =  T           #jitter the points to avoid overlap, adds noise to data
+
+#colors
+border_color       = "black"      #what color to set the polygon boundaries
+fill_color         = "white"      #what color to set the polygon fill
+point_color        = "black"      #what color do you want the points to be?
+point_size         =  1           #how big do you want the points to be?
+point_alpha        =  1           #set the point transparency from 0 to 1
+color_ramp_strt    =  "grey"
+color_ramp_end     =  "black"
 color_breaks       =  7           #number of color breaks
 scale_log10        =  F           #set the clorpleth scale to log10
-jitter             =  T           #jitter the points to avoid overlap, adds noise to data
-title_size         = 10
+
+#Fonts, titles, captions
+title_size         = 30
 subtitle_size      = 10
 caption_size       = 10
 map_title          = "Title"
 map_subtitle       = "Subtitle"
 map_caption        = "Caption"
 legend_title       = "Legend Title"
+title_face         = "plain"      #options: plain, bold, bold-italic, italic
+subtitle_face      = "plain"      #options: plain, bold, bold-italic, italic
+caption_face       = "plain"      #options: plain, bold, bold-italic, italic
+global_font_face   = "bold"       #set the global font face
+font_size          = 10           #set the global font size
+x_label            = ""
+y_label            = ""
+
 #----------------------------------------------------------------------------------
 #libraries
 library(ggplot2)
 library(maps)
+
 #get data
 lynchings = read.csv("MWT_dataset_compilation_v1_0_ChurchHepworth.csv")
 lynchings = lynchings [lynchings$year_source >= start_year &
@@ -151,15 +168,16 @@ if (jitter == T) {
 
 #theme
 g = g + theme_bw() + theme(
-  plot.title = element_text(size = title_size),
-  plot.subtitle = element_text(size = subtitle_size),
-  text = element_text(size = 20),
-  plot.caption = element_text(size = caption_size)
+  plot.title = element_text(size = title_size,face=title_face),
+  plot.subtitle = element_text(size = subtitle_size,face=subtitle_face),
+  text = element_text(size = font_size,face=global_font_face),
+  plot.caption = element_text(size = caption_size,face=caption_face)
 )
 
 #labels
 g = g + labs(title = map_title,
              subtitle = map_subtitle,
              caption = map_caption)
+g = g + xlab(x_label) + ylab(y_label)
 #draw map
 g
