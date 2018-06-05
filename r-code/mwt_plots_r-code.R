@@ -21,20 +21,20 @@ x_axis_size       = 0.1
 #text labels, font weights, sizes, and colors
 font
 plot_title             = "Plot Title"
-plot_title_size        = 22            #how big do you want the size of the title font? , default is 32
-plot_title_font_face   = "bold"        #what font weight do you want this to be? [plain, italic, bold]
+plot_title_size        = 10            #how big do you want the size of the title font? , default is 32
+plot_title_font_face   = "plain"        #what font weight do you want this to be? [plain, italic, bold]
 plot_title_color       = "black"       #what color do you want this to be? [hexidecimal ref or named color]
 plot_subtitle          = "Subtitle"
-plot_subtitle_size     = 12            #how big do you want the size of the subtitle font?, default is 22
+plot_subtitle_size     = 10            #how big do you want the size of the subtitle font?, default is 22
 plot_subtitle_font_face = "plain"       #what font weight do you want this to be? [plain, italic, bold]
 plot_caption           = "Caption"
 caption_size           = 10            #how big do you want the size of the caption font?, default is 10
 caption_font_face      = "italic"        #what font weight do you want this to be? [plain, italic, bold]
 caption_color         = "black"       #what color do you want this to be? [hexidecimal ref or named color]
-x_label                = "Test"
-y_label                = "Test"
-label_size             = 12            #how big do you want the size of the axis label fonts?, default is 22
-label_font_face        = "italic"      #what font weight do you want this to be? [plain, italic, bold]
+x_label                = "Label"
+y_label                = "Label"
+label_size             = 10            #how big do you want the size of the axis label fonts?, default is 22
+label_font_face        = "plain"      #what font weight do you want this to be? [plain, italic, bold]
 #----------------------------------------------------------------------------------------------------------
 #libraries
 library(ggplot2)
