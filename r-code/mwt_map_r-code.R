@@ -51,6 +51,9 @@ font_size          = 10           #set the global font size
 x_label            = ""
 y_label            = ""
 
+filter_by_alleged  = F
+alleged            = c("Arson","Incendiarism")
+
 #----------------------------------------------------------------------------------
 #libraries
 library(ggplot2)
@@ -59,7 +62,8 @@ library(maps)
 #get data
 lynchings = read.csv("MWT_dataset_compilation_v1_0_ChurchHepworth.csv")
 lynchings = lynchings [lynchings$year_source >= start_year &
-                         lynchings$year_source <= end_year, ]
+                         lynchings$year_source <= end_year,] 
+if (filter_by_alleged==T) { lynchings = lynchings[lynchings$alleged==alleged, ] }
 if (white_supremacy == T) {
   lynchings = lynchings [lynchings$mwt_white_supremacy == 1, ]
 }
@@ -118,7 +122,7 @@ g = ggplot() +
   geom_polygon(
     data = usa,
     aes(x = long, y = lat, group = group),
-    fill = "white",
+    fill = fill_color,
     color = "black"
   ) +
   coord_fixed(1.3)
