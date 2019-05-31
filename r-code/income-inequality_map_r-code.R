@@ -19,8 +19,7 @@ legend_title       = "Legend"
 
 library(maps)
 
-setwd("D:/Users/Christopher/Dropbox/NDAD/DHSI/course-packet/datasets/income-inequality/")
-income_data = read.csv("income-inequality.csv",header=T,stringsAsFactors = F)
+income_data = read.csv("http://files.ndadlab.org/income-inequality.csv",header=T,stringsAsFactors = F)
 income_data$county_name = tolower(income_data$county_name)
 counties = map_data("county")
 counties_ca = subset(counties, region == "california")

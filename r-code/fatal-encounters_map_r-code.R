@@ -2,8 +2,6 @@
 #CHRISTOPHER CHURCH / KATHERINE HEPWORTH
 #NOTE: Code only works for lower 48 states
 
-setwd("C:/Users/Christopher/Dropbox/NDAD/DHSI/course-packet/datasets/")
-
 #Variables to set to explore how to visualize these data ethically
 start_year         = 2000         #when to start mapping, default = 2000
 end_year           = 2018         #when to end mapping, default = 2018
@@ -33,7 +31,7 @@ library(ggplot2)
 library(maps)
 #library(fiftystater)
 #get data
-encounters = read.csv("fatal-encounters.csv",header=T,stringsAsFactors = F)
+encounters = read.csv("http://files.ndadlab.org/fatal-encounters.csv",header=T,stringsAsFactors = F)
 encounters = encounters[encounters$year>=start_year & encounters$year<=end_year,]
 encounters = encounters[encounters$LOCATION.STATE!="AK",]
 encounters = encounters[encounters$LOCATION.STATE!="HI",]

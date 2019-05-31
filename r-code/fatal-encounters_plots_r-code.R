@@ -1,9 +1,6 @@
 #INSTRUCTIONAL CODE FOR FATAL ENCOUNTERS ETHICAL VISUALIZATIONS - DHSI - OTHER PLOTS
 #CHRISTOPHER CHURCH / KATHERINE HEPWORTH
 
-#Where did you download the data?
-setwd("C:/Users/Christopher/Dropbox/NDAD/DHSI/course-packet/datasets/")
-
 #variables
 #----------------------------------------------------------------------------------------------------------
 start_year         = 2000               #when to start mapping, default = 2000
@@ -22,10 +19,10 @@ y_label            = ""
 #----------------------------------------------------------------------------------------------------------
 #libraries
 library(ggplot2)
-encounters$Su
+#encounters$Su
 
 #get data
-encounters = read.csv("fatal-encounters.csv",header=T,stringsAsFactors = F)
+encounters = read.csv("http://files.ndadlab.org/fatal-encounters.csv",header=T,stringsAsFactors = F)
 encounters = encounters[encounters$year>=start_year & encounters$year<=end_year,]
 
 plot_type = tolower(plot_type)
