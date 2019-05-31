@@ -42,7 +42,7 @@ library(ggplot2)
 
 
 #get data
-lynchings = read.csv(url(paste("http://aLHuyQ6cqrYLMP2F:",password,"@files.ndadlab.org/MWT_dataset_compilation_v1_0_ChurchHepworth.csv",sep="")))
+lynchings = read.csv(url(paste("http://aLHuyQ6cqrYLMP2F:",password,"@files.ndadlab.org/MWT/MWT_dataset_compilation_v1_0_ChurchHepworth.csv",sep="")))
 lynchings = lynchings [lynchings$year_source >= start_year &
                          lynchings$year_source <= end_year, ]
 if (white_supremacy == T) {

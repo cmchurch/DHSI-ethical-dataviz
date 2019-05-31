@@ -60,17 +60,17 @@ library(ggplot2)
 library(maps)
 
 #get data
-lynchings = read.csv(url(paste("http://aLHuyQ6cqrYLMP2F:",password,"@files.ndadlab.org/MWT_dataset_compilation_v1_0_ChurchHepworth.csv",sep="")))
+lynchings = read.csv(url(paste("http://aLHuyQ6cqrYLMP2F:",password,"@files.ndadlab.org/MWT/MWT_dataset_compilation_v1_0_ChurchHepworth.csv",sep="")))
 lynchings = lynchings [lynchings$year_source >= start_year &
                          lynchings$year_source <= end_year,] 
 if (filter_by_alleged==T) { lynchings = lynchings[lynchings$alleged==alleged, ] }
 if (white_supremacy == T) {
   lynchings = lynchings [lynchings$mwt_white_supremacy == 1, ]
 }
-county_centroids = read.csv(url(paste("http://aLHuyQ6cqrYLMP2F:",password,"@files.ndadlab.org/MonroeWorkToday_Counties_centroids.csv",sep="")))
+county_centroids = read.csv(url(paste("http://aLHuyQ6cqrYLMP2F:",password,"@files.ndadlab.org/MWT/MonroeWorkToday_Counties_centroids.csv",sep="")))
 merged_data = merge(lynchings, county_centroids, by = "keyid", all.x =
                       "TRUE")
-#merged_data = read.csv(url(paste("http://aLHuyQ6cqrYLMP2F:",password,"@files.ndadlab.org/MWT_merged_centroids.csv",sep=""))) #uncomment this to speed things up, so you don't have to merge the tables every time
+#merged_data = read.csv(url(paste("http://aLHuyQ6cqrYLMP2F:",password,"@files.ndadlab.org/MWT/MWT_merged_centroids.csv",sep=""))) #uncomment this to speed things up, so you don't have to merge the tables every time
 
 
 #map data
