@@ -1,9 +1,9 @@
 #INSTRUCTIONAL CODE FOR MONROE WORK TODAY (auut studio) ETHICAL VISUALIZATIONS - DHSI - MAPPING PORTION
 #CHRISTOPHER CHURCH / KATHERINE HEPWORTH
 
-#For these codes to work, please set the working path
+#For these codes to work, please set the password provided by the instructors
 
-#setwd("C:/Users/Christopher/Dropbox/NDAD/DHSI/course-packet/datasets/monroe-work-today")
+password = ""
 
 #Variables to set to explore how to visualize these data ethically
 
@@ -60,17 +60,17 @@ library(ggplot2)
 library(maps)
 
 #get data
-lynchings = read.csv("MWT_dataset_compilation_v1_0_ChurchHepworth.csv")
+lynchings = read.csv(url(paste("http://aLHuyQ6cqrYLMP2F:",password,"@files.ndadlab.org/MWT_dataset_compilation_v1_0_ChurchHepworth.csv",sep="")))
 lynchings = lynchings [lynchings$year_source >= start_year &
                          lynchings$year_source <= end_year,] 
 if (filter_by_alleged==T) { lynchings = lynchings[lynchings$alleged==alleged, ] }
 if (white_supremacy == T) {
   lynchings = lynchings [lynchings$mwt_white_supremacy == 1, ]
 }
-county_centroids = read.csv("MonroeWorkToday_Counties_centroids.csv")
+county_centroids = read.csv(url(paste("http://aLHuyQ6cqrYLMP2F:",password,"@files.ndadlab.org/MonroeWorkToday_Counties_centroids.csv",sep="")))
 merged_data = merge(lynchings, county_centroids, by = "keyid", all.x =
                       "TRUE")
-#merged_data = read.csv("MWT_merged_centroids.csv") #uncomment this to speed things up, so you don't have to merge the tables every time
+#merged_data = read.csv(url(paste("http://aLHuyQ6cqrYLMP2F:",password,"@files.ndadlab.org/MWT_merged_centroids.csv",sep=""))) #uncomment this to speed things up, so you don't have to merge the tables every time
 
 
 #map data
