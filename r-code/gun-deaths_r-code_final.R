@@ -38,14 +38,20 @@ df <- read.csv("https://github.com/cmchurch/DHSI-ethical-dataviz/raw/master/publ
 #------------------------------------------------------------------------------------------------
 library(ggplot2)
 #CREATE GRAPH
-g <- ggplot(df,aes(x=Year,y=Total_by_Firearm))
+
+#VECTORS
+X=df$Year
+Y=df$Total_by_Firearm
+
+#GRAPH
+g <- ggplot(df,aes(x=X,y=Y))
 
 if (plottype=="bar") {
 #BAR CHART
 g = g + geom_bar(stat="identity", fill=fill_color, alpha=fill_transparency)
 } else if (plottype=="scatter") {
 #SCATTERPLOT
-if (draw_scatter_fill==T) {g = g + geom_ribbon(aes(ymin = y_min,ymax=Total_by_Firearm), fill=fill_color,alpha=fill_transparency)}
+if (draw_scatter_fill==T) {g = g + geom_ribbon(aes(ymin = y_min,ymax=Y), fill=fill_color,alpha=fill_transparency)}
 if (draw_scatter_line==T) {g = g + geom_line(size=line_width) }
 if (draw_scatter_points==T) { g = g + geom_point(size=point_size) } 
 } 
