@@ -1,4 +1,4 @@
-Year,Population,Total_Murders,Murder_Rate_per_100,000,Total_by_Firearm,Total_Handgun,Total_Other_Firearm,Total_Percent_by_Firearms,Percent_by_Handguns,Percent_by_Other_Firearms,Total_by_Firearm_%_change,Population_%_Change
+Year,Population,Total_Murders,Murder_Rate_per_100,000,Total_by_Firearm,Total_Handgun,Total_Other_Firearm,Total_Percent_by_Firearms,Percent_by_Handguns,Percent_by_Other_Firearms,Total_by_Firearm_percent_change,Population_percent_Change
 1971,7041074,932,13.2,628,509,119,67.4,54.6,12.8,NULL,NULL
 1972,7441545,924,12.4,642,539,103,69.5,58.3,11.1,2.2,5.7
 1973,7845092,1182,15.1,769,637,132,65.1,53.9,11.2,19.8,5.4
