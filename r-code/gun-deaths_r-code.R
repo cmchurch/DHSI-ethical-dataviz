@@ -32,7 +32,7 @@ x_label = "X Label"
 y_label = "Y Label"
 #-----------------------------------------------------------------------------------------------
 #DATA FROM FLORIDA DEPARTMENT OF LAW ENFORCEMENT
-df <- read.csv("https://github.com/cmchurch/DHSI-ethical-dataviz/raw/master/public_data/gun-deaths_florida_full_1971-2016.csv",header=T,stringsAsFactors = F)
+df <- read.csv("https://github.com/cmchurch/DHSI-ethical-dataviz/raw/master/public_data/gun-deaths_florida_full_1971-2016.csv",header=T,stringsAsFactors = F,as.is=T)
 #-----------------------------------------------------------------------------------------------
 #GRAPH CODE
 #------------------------------------------------------------------------------------------------
