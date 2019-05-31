@@ -32,22 +32,20 @@ x_label = "X Label"
 y_label = "Y Label"
 #-----------------------------------------------------------------------------------------------
 #DATA FROM FLORIDA DEPARTMENT OF LAW ENFORCEMENT
-deaths_by_year = c(873,806,789,800,739,687,668,634,589,460,499,502,552,586,555,521,740,825,780,695,669,691,721,696,690,767)
-years = c(1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015)
-df = do.call(rbind, Map(data.frame, YEAR=years, DEATHS=deaths_by_year))
+df <- read.csv("https://github.com/cmchurch/DHSI-ethical-dataviz/raw/master/public_data/gun-deaths_florida_full_1971-2016.csv",header=T,stringsAsFactors = F)
 #-----------------------------------------------------------------------------------------------
 #GRAPH CODE
 #------------------------------------------------------------------------------------------------
 library(ggplot2)
 #CREATE GRAPH
-g <- ggplot(df,aes(x=YEAR,y=DEATHS))
+g <- ggplot(df,aes(x=Year,y=Total_by_Firearm))
 
 if (plottype=="bar") {
 #BAR CHART
 g = g + geom_bar(stat="identity", fill=fill_color, alpha=fill_transparency)
 } else if (plottype=="scatter") {
 #SCATTERPLOT
-if (draw_scatter_fill==T) {g = g + geom_ribbon(aes(ymin = y_min,ymax=DEATHS), fill=fill_color,alpha=fill_transparency)}
+if (draw_scatter_fill==T) {g = g + geom_ribbon(aes(ymin = y_min,ymax=Total_by_Firearm), fill=fill_color,alpha=fill_transparency)}
 if (draw_scatter_line==T) {g = g + geom_line(size=line_width) }
 if (draw_scatter_points==T) { g = g + geom_point(size=point_size) } 
 } 
@@ -58,7 +56,7 @@ if(inverse_y_scale==T) { g = g + scale_y_reverse(limits = c(y_max,0),expand = c(
 } else {g = g + scale_y_continuous(limits = c(0,y_max),expand = c(0, 0))}
 #TITLES and LABELS
 g = g + labs(title=plot_title,subtitle=plot_subtitle,caption=plot_caption)+xlab(x_label)+ylab(y_label)
-deaths_syg = df$DEATHS[df$YEAR==2005]
+deaths_syg = df$Total_by_Firearm[df$Year==2005]
 if(label_stand_your_ground==T) {
   g = g + geom_text(data = df, aes(x = 2005, y = deaths_syg - 300, label = point_label),color="white",size=5,hjust=0)
   g = g + geom_segment(aes(x = 2005, y = deaths_syg-150, xend=2005, yend=deaths_syg-20),color="white",size=1)
