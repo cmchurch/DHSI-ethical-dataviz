@@ -1,8 +1,9 @@
 #INSTRUCTIONAL CODE FOR MONROE WORK TODAY (auut studio) ETHICAL VISUALIZATIONS - DHSI - OTHER PLOTS
 #CHRISTOPHER CHURCH / KATHERINE HEPWORTH
 
-#Where did you download the data?
-#setwd("D:/Users/Christopher/Dropbox/NDAD/DHSI/course-packet/datasets/monroe-work-today")
+#For these codes to work, please set the password provided by the instructors
+
+password = ""
 
 #variables
 #----------------------------------------------------------------------------------------------------------
@@ -41,7 +42,7 @@ library(ggplot2)
 
 
 #get data
-lynchings = read.csv("MWT_dataset_compilation_v1_0_ChurchHepworth.csv")
+lynchings = read.csv(url(paste("http://aLHuyQ6cqrYLMP2F:",password,"@files.ndadlab.org/MWT_dataset_compilation_v1_0_ChurchHepworth.csv",sep="")))
 lynchings = lynchings [lynchings$year_source >= start_year &
                          lynchings$year_source <= end_year, ]
 if (white_supremacy == T) {
