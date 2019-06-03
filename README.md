@@ -50,8 +50,9 @@ All work herein is available under a Creative Commons license.
 <li><em>10 minute Discussion: </em>
 <ul>
 <li>Snow and Ice: </li>
+<ul>
 <li><a href="https://github.com/cmchurch/DHSI-ethical-dataviz/blob/master/images/snow-ice_BBC.jpg">BBC</a></li>
-<li><a href="https://www.rac.co.uk/drive/advice/learning-to-drive/stopping-distances/">RAC</a></li>
+<li><a href="https://www.rac.co.uk/drive/advice/learning-to-drive/stopping-distances/">RAC</a></li></ul>
 <li>What is ethical and unethical about this chart?</li>
 <li>What are the limits of ethics in this visualization context?</li>
 </ul>
