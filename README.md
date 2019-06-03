@@ -110,6 +110,7 @@ All work herein is available under a Creative Commons license.
 <li><strong><em>80 minutes:</em></strong><em> Examples &amp; Discussion: </em>Exploring Sample Visualizations &mdash; Challenging Racism with Visualizations - W.E.B. Dubois
 <ul>
 <li>10 minute read the following: <a href="https://www.theguardian.com/world/2017/feb/14/web-du-bois-racism-data-paris-african-americans-jobs">https://www.theguardian.com/world/2017/feb/14/web-du-bois-racism-data-paris-african-americans-jobs</a></li>
+<li>For further context, also take a look at the following: <a href="https://www.smithsonianmag.com/history/first-time-together-and-color-book-displays-web-du-bois-visionary-infographics-180970826/">https://www.smithsonianmag.com/history/first-time-together-and-color-book-displays-web-du-bois-visionary-infographics-180970826/</a>
 <li>20 minute discussion of Du Bois and Chalabi charts</li>
 <li>30 minute re-draw of one chart from reading</li>
 <li>30 minute sharing and reflection</li>
