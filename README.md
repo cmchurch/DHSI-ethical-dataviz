@@ -93,7 +93,7 @@ All work herein is available under a Creative Commons license.
 <li><em>70 minute pair activity Make Gun Deaths in Florida charts (analog and/or digital)</em>
 <ul>
 <li>10 minute real-world controversy</li>
-<li>5 minute exploration of FLDA data</li>
+<li>5 minute exploration of FDLE data</li>
 <li>15 minute discussion best ways of visualizing data</li>
 <li>20 minute download Gun Deaths in Florida R code and open in a new project on your instance of RStudio Cloud</li>
 </ul>
