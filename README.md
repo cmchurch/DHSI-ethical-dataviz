@@ -128,16 +128,15 @@ All work herein is available under a Creative Commons license.
 <h3>Morning 3: Creating Culturally and Politically Sensitive Visualizations</h3>
 <h4>9:00am to 12pm (3 hours)</h4>
 <ul>
-<li><strong><em>30 minutes: </em></strong><em>Show and tell gun deaths visualizations and WEB DuBois visualizations</em></li>
-<li><strong><em>30-45 minutes: </em></strong><em>Lecture: </em>Historicizing visualization &mdash; narrative and graphic visualization conventions through history</li>
+<li><strong><em>30-50 minutes: </em></strong><em>Show and tell gun deaths visualizations and WEB DuBois visualizations</em></li>
+<li><strong><em>10 minutes: </em></strong><em>Break</em></li>
+<li><strong><em>20-45 minutes: </em></strong><em>Lecture: </em>Historicizing visualization &mdash; narrative and graphic visualization conventions through history</li>
 <li><strong><em>100 minutes:</em></strong><em> Visual exploration activity &amp; discussion:</em> Exploring and discussing <a href="https://lynchinginamerica.eji.org/explore">Racial Terror Lynchings</a> and <a href="http://www.monroeworktoday.org/explore/">Map of White Supremacist Mob Violence</a> compare with Racial Terror Lynchings
 <ul>
-<li>30 minute individual exploration</li>
-<li>30 minute pair discussion</li>
+<li>35 minute pair discussion & exploration</li>
 <li>40 minute whole class discussion</li>
 </ul>
 </li>
-<li><strong><em>10 minutes: </em></strong><em>Break</em></li>
 </ul>
 <h3>Afternoon 3: Discussion and Project Time</h3>
 <h4>1:30pm to 4:00pm (2.5 hours)</h4>
@@ -149,7 +148,8 @@ All work herein is available under a Creative Commons license.
 </ul>
 </li>
 <li><strong><em>140 minutes:</em></strong><em> Visualization activity: </em>Creating visualization plots (using provided, pre-made R codes and/or analog versions) based on the mapping projects using the data from Monroe Work Today</li>
-<li><em>Project time:</em> apply principles and practices learned so far to your own treacherous data, creating a visualization using R, pen and paper, Raw Graphs (<a href="http://app.rawgraphs.io/">http://app.rawgraphs.io/</a>) or Excel</li>
+<ul><li><a href="https://www.dropbox.com/sh/e839tkh7dycbw5i/AABl2jWq1-N2LaZMRr0FNhUsa?dl=0">Read the Documentation for MWT</a></li></ul>
+<li><em>Project time:</em> apply principles and practices learned so far to your own treacherous data, creating a visualization using R or pen and paper.</li>
 </ul>
 <h3>Optional After-Class Reading</h3>
 <ul>
