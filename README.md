@@ -110,7 +110,6 @@ All work herein is available under a Creative Commons license.
 <h3>Afternoon 2: Visualizing Race</h3>
 <h4>1:30pm to 4:00pm (2.5 hours)</h4>
 <ul>
-<li><strong><em>30-45 minutes: </em></strong><em>Lecture: </em>Historicizing visualization &mdash; narrative and graphic visualization conventions through history</li>
 <li><strong><em>80 minutes:</em></strong><em> Examples &amp; Discussion: </em>Exploring Sample Visualizations &mdash; Challenging Racism with Visualizations - W.E.B. Dubois
 <ul>
 <li>10 minute read the following: <a href="https://www.theguardian.com/world/2017/feb/14/web-du-bois-racism-data-paris-african-americans-jobs">https://www.theguardian.com/world/2017/feb/14/web-du-bois-racism-data-paris-african-americans-jobs</a></li>
@@ -118,13 +117,6 @@ All work herein is available under a Creative Commons license.
 <li>20 minute discussion of Du Bois and Chalabi charts</li>
 <li>30 minute re-draw of one chart from reading</li>
 <li>30 minute sharing and reflection</li>
-</ul>
-</li>
-<li><strong><em>50 minutes:</em></strong><em> Visual exploration activity &amp; discussion:</em> Exploring and discussing <a href="https://lynchinginamerica.eji.org/explore">Racial Terror Lynchings</a> map
-<ul>
-<li>15 minute individual exploration</li>
-<li>15 minute pair discussion</li>
-<li>20 minute whole class discussion</li>
 </ul>
 </li>
 </ul>
@@ -136,12 +128,13 @@ All work herein is available under a Creative Commons license.
 <h3>Morning 3: Creating Culturally and Politically Sensitive Visualizations</h3>
 <h4>9:00am to 12pm (3 hours)</h4>
 <ul>
-<li><strong><em>30 minutes: </em></strong><em>Reflection and integration group discussion</em></li>
-<li><strong><em>70 minutes:</em></strong><em> Visual exploration activity &amp; discussion:</em> Exploring and discussing <a href="http://www.monroeworktoday.org/explore/">Map of White Supremacist Mob Violence</a> compare with Racial Terror Lynchings
+<li><strong><em>30 minutes: </em></strong><em>Show and tell gun deaths visualizations and WEB DuBois visualizations</em></li>
+<li><strong><em>30-45 minutes: </em></strong><em>Lecture: </em>Historicizing visualization &mdash; narrative and graphic visualization conventions through history</li>
+<li><strong><em>100 minutes:</em></strong><em> Visual exploration activity &amp; discussion:</em> Exploring and discussing <a href="https://lynchinginamerica.eji.org/explore">Racial Terror Lynchings</a> and <a href="http://www.monroeworktoday.org/explore/">Map of White Supremacist Mob Violence</a> compare with Racial Terror Lynchings
 <ul>
-<li>20 minute individual exploration</li>
-<li>20 minute pair discussion</li>
-<li>30 minute whole class discussion</li>
+<li>30 minute individual exploration</li>
+<li>30 minute pair discussion</li>
+<li>40 minute whole class discussion</li>
 </ul>
 </li>
 <li><strong><em>10 minutes: </em></strong><em>Break</em></li>
