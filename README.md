@@ -148,7 +148,7 @@ All work herein is available under a Creative Commons license.
 </ul>
 </li>
 <li><strong><em>140 minutes:</em></strong><em> Visualization activity: </em>Creating visualization plots (using provided, pre-made R codes and/or analog versions) based on the mapping projects using the data from Monroe Work Today</li>
-<ul><li><a href="https://www.dropbox.com/sh/e839tkh7dycbw5i/AABl2jWq1-N2LaZMRr0FNhUsa?dl=0">Read the Documentation for MWT</a></li></ul>
+<ul><li><a href="https://www.dropbox.com/sh/3e9ud6m8oa35uc1/AABA0HBjhbuhZsb1ajWZ09UHa?dl=0">Read the Documentation for MWT</a></li></ul>
 <li><em>Project time:</em> apply principles and practices learned so far to your own treacherous data, creating a visualization using R or pen and paper.</li>
 </ul>
 <h3>Optional After-Class Reading</h3>
