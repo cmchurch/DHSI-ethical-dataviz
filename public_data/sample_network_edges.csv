@@ -1,0 +1,5 @@
+"SOURCE","TARGET","WEIGHT","TYPE"
+1,2,1,"married"
+2,3,2,"friend"
+3,1,5,"sibling"
+4,2,2,"friend"
