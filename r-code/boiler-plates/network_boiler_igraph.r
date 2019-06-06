@@ -27,4 +27,5 @@ E(net)$width <- E(net)$WEIGHT        #set the edge weight
 
 #PLOT THE GRAPH
 plot(net,
-     edge.arrow.size=.4)
+     edge.arrow.size=.4,
+     layout=layout.fruchterman.reingold)
