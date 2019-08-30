@@ -1,6 +1,8 @@
+-----------------------------------------------------------
 #CHRISTOPHER CHURCH / KATHERINE HEPWORTH
 #DHSI - ETHICAL DATA VIZ
 #SAMPLE CODE - BBC SNOW/ICE
+-----------------------------------------------------------
 
 # geom_bar is designed to make it easy to create bar charts that show
 # counts (or sums of weights)
